@@ -11,13 +11,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-class lcd extends javax.swing.JFrame {
+class Lcd extends javax.swing.JFrame {
     public int x=-30,y=-30,s=60,gap=60;
     public int a[][]=new int[4][7];
 
     public int i=0;
     char colour='f';
-    public lcd() {
+    public Lcd() {
         initComponents();
         for(int i=0;i<4;i++)
         {
@@ -32,10 +32,10 @@ class lcd extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        canvas1 = new lcdCanvas(this);
-        canvas2 = new lcdCanvas(this);
-        canvas3 = new lcdCanvas(this);
-        canvas4 = new lcdCanvas(this);
+        canvas1 = new LcdCanvas(this);
+        canvas2 = new LcdCanvas(this);
+        canvas3 = new LcdCanvas(this);
+        canvas4 = new LcdCanvas(this);
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -188,7 +188,7 @@ class lcd extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        lcdCanvas c=(lcdCanvas)canvas1;
+        LcdCanvas c=(LcdCanvas)canvas1;
     }//GEN-LAST:event_formWindowClosing
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -268,7 +268,7 @@ class lcd extends javax.swing.JFrame {
     public static void main(String args[]) {
         
        
-       lcd o=new lcd();
+       Lcd o=new Lcd();
        o.a[0]=o.decoder('9');
        o.setVisible(true);
         
@@ -295,27 +295,27 @@ class lcd extends javax.swing.JFrame {
 
 
 }
-class lcdCanvas extends Canvas
+class LcdCanvas extends Canvas
 {
 
     int x=-30,y=-40,s=30;
 
         int a[][]=new int[1][7];
 
-    lcd o;
-    public lcdCanvas() {
+    Lcd o;
+    public LcdCanvas() {
 
             a[0]=decoder('5');
 
     }
-    public lcdCanvas(char c) {
+    public LcdCanvas(char c) {
 
             a[0]=decoder(c);
 
 
     }
 
-    public lcdCanvas(lcd o) {
+    public LcdCanvas(Lcd o) {
 
             this.o=o;
             a[0]=decoder('5');

@@ -21,13 +21,13 @@ import javax.swing.text.StyledDocument;
  *
  * @author Jubin
  */
-public class text extends javax.swing.JFrame {
+public class Text extends javax.swing.JFrame {
 
     Hexcode h=new Hexcode();
     Preprocessor p=new Preprocessor();
     String[] code;
     /** Creates new form text */
-    public text() {
+    public Text() {
         //initComponents();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -273,7 +273,7 @@ public class text extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new text().setVisible(true);
+                new Text().setVisible(true);
                 
             }
         });
