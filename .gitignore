@@ -2,3 +2,14 @@ target/
 
 # IntelliJ
 .idea/
+
+# LaTeX
+*-blx.bib
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pdf
+*.run.xml
+*.toc
