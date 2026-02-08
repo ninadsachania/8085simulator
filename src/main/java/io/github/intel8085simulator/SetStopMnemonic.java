@@ -1,17 +1,17 @@
 package io.github.intel8085simulator;
 
-public class setStopMnemonic extends javax.swing.JFrame {
+public class SetStopMnemonic extends javax.swing.JFrame {
 
 
     Assembler o;
     int n;
     String s="oh";
     AssemblerEngine engine;
-    public setStopMnemonic() {
+    public SetStopMnemonic() {
         initComponents();
     }
 
-     public setStopMnemonic(Assembler o) {
+     public SetStopMnemonic(Assembler o) {
         o.setEnabled(false);
         this.o=o;
         initComponents();
@@ -123,7 +123,7 @@ public class setStopMnemonic extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new setStopMnemonic().setVisible(true);
+                new SetStopMnemonic().setVisible(true);
             }
         });
     }
