@@ -1,13 +1,8 @@
 package io.github.intel8085simulator;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 
 
 public class Trainer extends javax.swing.JFrame implements Runnable {

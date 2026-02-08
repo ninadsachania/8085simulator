@@ -2,13 +2,8 @@ package io.github.intel8085simulator;
 
 import java.awt.BasicStroke;
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 class Lcd extends javax.swing.JFrame {
