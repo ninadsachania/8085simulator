@@ -1,8 +1,5 @@
 package io.github.intel8085simulator;
 
-import java.awt.Font;
-import javax.swing.text.IconView;
-
 public class InterruptServiceSubroutine extends javax.swing.JFrame {
 
     public InterruptServiceSubroutine() {

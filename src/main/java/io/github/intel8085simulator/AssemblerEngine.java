@@ -1,7 +1,5 @@
 package io.github.intel8085simulator;
 
-import java.util.regex.*;
-
 public class AssemblerEngine {
 
     public  String S[] = new String[256];

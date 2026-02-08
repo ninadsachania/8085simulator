@@ -9,11 +9,7 @@ import java.util.Enumeration;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.jar.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultHighlighter;
 
 public class Assembler extends javax.swing.JFrame implements Runnable{
 
