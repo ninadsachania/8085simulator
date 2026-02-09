@@ -1823,4 +1823,50 @@ public class Matrix {
         
 }
 
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Matrix{");
+        sb.append("beginAddress=").append(beginAddress);
+        sb.append(", stopAddress=").append(stopAddress);
+        sb.append(", A=").append(A);
+        sb.append(", B=").append(B);
+        sb.append(", C=").append(C);
+        sb.append(", D=").append(D);
+        sb.append(", E=").append(E);
+        sb.append(", F=").append(F);
+        sb.append(", H=").append(H);
+        sb.append(", L=").append(L);
+        sb.append(", SP=").append(SP);
+        sb.append(", PC=").append(PC);
+        sb.append(", D1=").append(D1);
+        sb.append(", SOD=").append(SOD);
+        sb.append(", SDE=").append(SDE);
+        sb.append(", SID=").append(SID);
+        sb.append(", R75=").append(R75);
+        sb.append(", R65=").append(R65);
+        sb.append(", R55=").append(R55);
+        sb.append(", MSE=").append(MSE);
+        sb.append(", RR75=").append(RR75);
+        sb.append(", M75=").append(M75);
+        sb.append(", M65=").append(M65);
+        sb.append(", M55=").append(M55);
+        sb.append(", IE=").append(IE);
+        sb.append(", INTR=").append(INTR);
+        sb.append(", _INTA=").append(_INTA);
+        sb.append(", TRAP=").append(TRAP);
+        sb.append(", HOLD=").append(HOLD);
+        sb.append(", _HOLDA=").append(_HOLDA);
+        sb.append(", _RESETIN=").append(_RESETIN);
+        sb.append(", RESETOUT=").append(RESETOUT);
+        sb.append(", IO_M=").append(IO_M);
+        sb.append(", _RD=").append(_RD);
+        sb.append(", _WR=").append(_WR);
+        sb.append(", clockCycleCounter=").append(clockCycleCounter);
+        sb.append(", instructionCounter=").append(instructionCounter);
+        sb.append(", temp=").append(temp);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }

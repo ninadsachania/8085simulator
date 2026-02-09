@@ -1,0 +1,1 @@
+Matrix{beginAddress=0, stopAddress=65535, A=6, B=0, C=0, D=0, E=0, F=20, H=0, L=0, SP=0, PC=8, D1=0, SOD=0, SDE=0, SID=0, R75=0, R65=0, R55=0, MSE=0, RR75=0, M75=0, M65=0, M55=0, IE=0, INTR=0, _INTA=0, TRAP=0, HOLD=0, _HOLDA=0, _RESETIN=1, RESETOUT=0, IO_M=0, _RD=0, _WR=0, clockCycleCounter=38, instructionCounter=4, temp=0}
