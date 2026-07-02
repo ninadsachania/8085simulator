@@ -30,6 +30,9 @@ jobs:
       - name: Compile
         run: mvn clean compile
 
+      - name: Check formatting
+        run: mvn spotless:check
+
       - name: Test (Ubuntu)
         if: matrix.os == 'ubuntu-latest'
         run: xvfb-run -a mvn clean test
