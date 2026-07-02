@@ -48,7 +48,6 @@ public class TextEditor {
         //add(jScrollPane1);
         p = obj.preprocessor;
         asm = obj;
-        h.initHexcode();
         code = h.S;
         jTextPane1.getDocument().putProperty(DefaultEditorKit.EndOfLineStringProperty, "\n");
 
