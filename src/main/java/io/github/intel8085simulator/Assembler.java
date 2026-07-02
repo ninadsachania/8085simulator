@@ -2948,10 +2948,6 @@ public class Assembler extends javax.swing.JFrame implements Runnable{
    }//GEN-LAST:event_jMenuItemAutocorrectActionPerformed
 
    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-
-       Lcd lcd=new Lcd();
-       lcd.setVisible(true);
-
    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
