@@ -1,9 +1,9 @@
 package io.github.intel8085simulator;
 
+import static org.junit.Assert.assertEquals;
+
 import org.approvaltests.Approvals;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class Intel8085SimulatorTest {
 
@@ -35,11 +35,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 0x96;
 
         // 1's complement of an 8-bit number.
-        String[] code = {
-                "LDA C050",
-                "CMA",
-                "STA C051",
-                "HLT"
+        String[] code = {"LDA C050", "CMA", "STA C051", "HLT"
         };
 
         runCode(code, engine, matrix, assembler);
@@ -58,12 +54,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 0x96;
 
         // 2's complement of an 8-bit number.
-        String[] code = {
-                "LDA C050",
-                "CMA",
-                "INR A",
-                "STA C051",
-                "HLT",
+        String[] code = {"LDA C050", "CMA", "INR A", "STA C051", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -83,13 +74,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC051] = 0x66;
 
         // Addition of two 8-bit numbers.
-        String[] code = {
-                "LXI H,C050",
-                "MOV A,M",
-                "INX H",
-                "ADD M",
-                "STA C052",
-                "HLT",
+        String[] code = {"LXI H,C050", "MOV A,M", "INX H", "ADD M", "STA C052", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -108,11 +93,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 0x65;
 
         // Shift an 8-bit number left by 1 bit
-        String[] code = {
-                "LDA C050",
-                "ADD A",
-                "STA C051",
-                "HLT",
+        String[] code = {"LDA C050", "ADD A", "STA C051", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -136,14 +117,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 9;
 
         // To find square from loop-up table.
-        String[] code = {
-                "LDA C050",
-                "ADI 60",
-                "MOV L,A",
-                "MVI H,C0",
-                "MOV A,M",
-                "STA C051",
-                "HLT",
+        String[] code = {"LDA C050", "ADI 60", "MOV L,A", "MVI H,C0", "MOV A,M", "STA C051", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -164,16 +138,7 @@ public class Intel8085SimulatorTest {
 
         // 8-bit decimal subtraction.
         // If 2nd no is greater than 1st no then the answer will in 2's complement.
-        String[] code = {
-                "LXI H,C051",
-                "MVI A,99",
-                "SUB M",
-                "INR A",
-                "DCX H",
-                "ADD M",
-                "DAA",
-                "STA C052",
-                "HLT",
+        String[] code = {"LXI H,C051", "MVI A,99", "SUB M", "INR A", "DCX H", "ADD M", "DAA", "STA C052", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -192,11 +157,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 0x96;
 
         // Mask off least significant 4 bits of an 8-bit number.
-        String[] code = {
-                "LDA C050",
-                "ANI F0",
-                "STA C051",
-                "HLT",
+        String[] code = {"LDA C050", "ANI F0", "STA C051", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -215,11 +176,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 0x96;
 
         // Mask off most significant 4 bits of an 8-bit number.
-        String[] code = {
-                "LDA C050",
-                "ANI 0F",
-                "STA C051",
-                "HLT",
+        String[] code = {"LDA C050", "ANI 0F", "STA C051", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -238,11 +195,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC050] = 0x65;
 
         // Shift an 8-bit number left by 1 bit.
-        String[] code = {
-                "LDA C050",
-                "ADD A",
-                "STA C051",
-                "HLT",
+        String[] code = {"LDA C050", "ADD A", "STA C051", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -262,11 +215,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC051] = 0x75;
 
         // Shift an 16-bit number left by 1 bit.
-        String[] code = {
-                "LHLD C050",
-                "DAD H",
-                "SHLD C052",
-                "HLT",
+        String[] code = {"LHLD C050", "DAD H", "SHLD C052", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -287,12 +236,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC051] = 0x15;
 
         // Shift an 16-bit number left by 2 bits.
-        String[] code = {
-                "LHLD C050",
-                "DAD H",
-                "DAD H",
-                "SHLD C052",
-                "HLT",
+        String[] code = {"LHLD C050", "DAD H", "DAD H", "SHLD C052", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -313,14 +257,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC051] = 0x65;
 
         // Subtraction of two 8-bit numbers.
-        String[] code = {
-                "LXI H,C050",
-                "MOV A,M",
-                "INX H",
-                "SUB M",
-                "INX H",
-                "MOV M,A",
-                "HLT",
+        String[] code = {"LXI H,C050", "MOV A,M", "INX H", "SUB M", "INX H", "MOV M,A", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
@@ -340,16 +277,7 @@ public class Intel8085SimulatorTest {
         matrix.memory[0xC051] = 0x54;
 
         // 1's complement of a 16-bit number.
-        String[] code = {
-                "LXI H,C050",
-                "MOV A,M",
-                "CMA",
-                "STA C052",
-                "INX H",
-                "MOV A,M",
-                "CMA",
-                "STA C053",
-                "HLT",
+        String[] code = {"LXI H,C050", "MOV A,M", "CMA", "STA C052", "INX H", "MOV A,M", "CMA", "STA C053", "HLT",
         };
 
         runCode(code, engine, matrix, assembler);
