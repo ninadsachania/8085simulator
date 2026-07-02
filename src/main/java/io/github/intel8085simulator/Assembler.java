@@ -2956,7 +2956,7 @@ public class Assembler extends javax.swing.JFrame implements Runnable{
 
    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-       SteperMotor motor=new SteperMotor();
+       StepperMotor motor=new StepperMotor();
        motor.setVisible(true);
    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
