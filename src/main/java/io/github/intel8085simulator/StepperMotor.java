@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class SteperMotor extends javax.swing.JFrame {
+public class StepperMotor extends javax.swing.JFrame {
 
     int x=-80,y=-80;
     int rotateLeft=0,rotateRight=0,stop=1;
@@ -14,7 +14,7 @@ public class SteperMotor extends javax.swing.JFrame {
     int speed=50;
    CanvasDraw c;
 
-    public SteperMotor() {
+    public StepperMotor() {
         initComponents();
         c=(CanvasDraw) canvas1;
     }
@@ -139,7 +139,7 @@ public class SteperMotor extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SteperMotor().setVisible(true);
+                new StepperMotor().setVisible(true);
             }
         });
     }
@@ -158,10 +158,10 @@ class CanvasDraw extends Canvas implements Runnable
 {
     Graphics g;
     ExecutorService exec = Executors.newCachedThreadPool();
-    SteperMotor o;
+    StepperMotor o;
     boolean run=true;
 
-    public CanvasDraw(SteperMotor o)
+    public CanvasDraw(StepperMotor o)
     {
         this.o=o;
         exec.execute(this);
