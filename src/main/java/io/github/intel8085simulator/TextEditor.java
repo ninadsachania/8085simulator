@@ -88,28 +88,29 @@ public class TextEditor {
         } catch (Exception e) {
         }
     }
+
     String[] undo = new String[0xFFF];
     int[] caretPos = new int[0xFFF];
     int undoIndex = -1;
 
     public void undo() {
-        try{
+        try {
             if (undoIndex > 0) {
-            jTextPane1.setText(undo[--undoIndex]);
-            jTextPane1.setCaretPosition(caretPos[undoIndex]);
-        }
-        }catch(Exception e){
+                jTextPane1.setText(undo[--undoIndex]);
+                jTextPane1.setCaretPosition(caretPos[undoIndex]);
+            }
+        } catch (Exception e) {
             System.err.println(e);
         }
     }
 
     public void redo() {
-        try{
+        try {
             if (undoIndex < undo.length) {
-            jTextPane1.setText(undo[++undoIndex]);
-        }
-        jTextPane1.setCaretPosition(caretPos[undoIndex]);
-        }catch(Exception e){
+                jTextPane1.setText(undo[++undoIndex]);
+            }
+            jTextPane1.setCaretPosition(caretPos[undoIndex]);
+        } catch (Exception e) {
             System.err.println(e);
         }
     }
@@ -129,11 +130,9 @@ public class TextEditor {
             ok = false;
         } else if (evt.getKeyCode() == 17) { //ctrl character
             ok = false;
-        }
-        else if (evt.isActionKey()) { //ctrl character
+        } else if (evt.isActionKey()) { //ctrl character
             ok = false;
-        }
-        else {
+        } else {
             undo[undoIndex = (++undoIndex) & undo.length] = jTextPane1.getText();
             caretPos[undoIndex] = jTextPane1.getCaretPosition();
             ok = true;
@@ -262,6 +261,7 @@ public class TextEditor {
             }
         });
     }
+
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JTextPane jTextPane1;

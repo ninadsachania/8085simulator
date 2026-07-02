@@ -5,19 +5,21 @@ public class SetStopMnemonic extends javax.swing.JFrame {
 
     Assembler o;
     int n;
-    String s="oh";
+    String s = "oh";
     AssemblerEngine engine;
+
     public SetStopMnemonic() {
         initComponents();
     }
 
-     public SetStopMnemonic(Assembler o) {
+    public SetStopMnemonic(Assembler o) {
         o.setEnabled(false);
-        this.o=o;
+        this.o = o;
         initComponents();
-        engine=o.engine;
+        engine = o.engine;
         jTextField1.setText(engine.S[o.stopAtIndex]);
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -58,22 +60,10 @@ public class SetStopMnemonic extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup().addContainerGap().addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE).addGap(18, 18, 18).addComponent(jButton1).addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(jButton1)).addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,23 +76,21 @@ public class SetStopMnemonic extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
 
-        if(jButton1.getText().equalsIgnoreCase("Set")){
-            n=engine.getIndexFromMnemonic(jTextField1.getText());
+        if (jButton1.getText().equalsIgnoreCase("Set")) {
+            n = engine.getIndexFromMnemonic(jTextField1.getText());
             jTextField1.setText(engine.S[n]);
             jButton1.setText("OK");
-            o.stopAtIndex=n;
-        }
-        else if(jButton1.getText().equalsIgnoreCase("Seconds")){
+            o.stopAtIndex = n;
+        } else if (jButton1.getText().equalsIgnoreCase("Seconds")) {
             try {
-            o.speed[0]=Float.parseFloat(jTextField1.getText().toString().trim());
-            jButton1.setText("OK");
+                o.speed[0] = Float.parseFloat(jTextField1.getText().toString().trim());
+                jButton1.setText("OK");
             } catch (Exception e) {
-            jTextField1.setText("0");
-            jButton1.setText("Seconds");
+                jTextField1.setText("0");
+                jButton1.setText("Seconds");
             }
 
-        }
-        else if(jButton1.getText().equalsIgnoreCase("OK")){
+        } else if (jButton1.getText().equalsIgnoreCase("OK")) {
             o.setEnabled(true);
             dispose();
         }
@@ -118,8 +106,8 @@ public class SetStopMnemonic extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     /**
-    * @param args the command line arguments
-    */
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
